@@ -8,7 +8,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   // Methods that must be written
 
   public int length() {
-
+    return data.length;
   }
 
   public char charAt(int index) {
@@ -21,7 +21,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 
   public String toString{
     String result = "";
-    for(int i = 0; i < data.length; i++ {
+    for(int i = 0; i < length(); i++ {
       result += charAt(i);
     }
     return result;
