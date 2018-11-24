@@ -12,12 +12,12 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 
 // Comparable method required
   public int compareTo(MyString object) {
-    if(object == null) {throw new NullPointerException();} // if object is null, then output appropriate exception
-    if(object.length() != this.length()) {return this.length() - object.length();}
-    for(int i = 0; i < object.length && i < this.length(); i++ {
-      if(object.charAt(i) != this.charAt(i)) {return object.charAt(i) - this.charAt(i);}
+    if(object == null || this == null) {throw new NullPointerException();} // if object or this is null, then output appropriate exception
+    if(object.length() != this.length()) {return this.length() - object.length();} // if the lengths are not equal, we can find result here
+    for(int i = 0; i < object.length; i++ {
+      if(object.charAt(i) != this.charAt(i)) {return object.charAt(i) - this.charAt(i);} // look for the disimmilar char, then return the difference
     }
-    return 0;
+    return 0; // return 0 otherwise
   }
 
   // Methods that must be written
