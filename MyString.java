@@ -14,6 +14,10 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   public int compareTo(MyString object) {
     if(object == null) {throw new NullPointerException();} // if object is null, then output appropriate exception
     if(object.length() != this.length()) {return this.length() - object.length();}
+    for(int i = 0; i < object.length && i < this.length(); i++ {
+      if(object.charAt(i) != this.charAt(i)) {return object.charAt(i) - this.charAt(i);}
+    }
+    return 0;
   }
 
   // Methods that must be written
