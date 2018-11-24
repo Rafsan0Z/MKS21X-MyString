@@ -44,7 +44,8 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     for(int i = start; i < end; i++) {
       result += this.data[i];
     }
-    return result;
+    MyString output = new MyString(result);
+    return output;
   }
 
 // Standard toString method
