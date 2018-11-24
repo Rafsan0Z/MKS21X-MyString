@@ -13,6 +13,8 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 // Comparable method required
   public int compareTo(MyString object) {
     if(object == null) {throw new NullPointerException();} // if object is null, then output appropriate exception
+    if(object.length() == 0) {return this.length();}
+    if(this.length() == 0) {return object.length()*-1;}
   }
 
   // Methods that must be written
