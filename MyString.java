@@ -2,7 +2,9 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   private char[] data;
 
   public MyString(Charsequence s) {
-
+    for(int i = 0; i < s.length(); i++) {
+      data[i] = s.charAt(i);
+    }
   }
 
   // Methods that must be written
