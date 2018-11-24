@@ -15,7 +15,10 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   // Methods that must be written
 
   public int length() {
-    return data.length;
+    if(index < 0 || index >= data.length) {
+      throw new IndexOutOfBoundsException();
+    }
+    return this.data.length;
   }
 
   public char charAt(int index) {
