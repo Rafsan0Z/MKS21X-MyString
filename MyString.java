@@ -20,7 +20,11 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   }
 
   public String toString{
-
+    String result = "";
+    for(int i = 0; i < data.length; i++ {
+      result += charAt(i);
+    }
+    return result;
   }
 
 }
