@@ -12,7 +12,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 
 // Comparable method required
   public int compareTo(MyString object) {
-
+    if(object == null) {throw new NullPointerException();}
   }
 
   // Methods that must be written
