@@ -7,6 +7,10 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
     }
   }
 
+  public int compareTo(MyString object) {
+    
+  }
+
   // Methods that must be written
 
   public int length() {
