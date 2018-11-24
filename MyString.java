@@ -19,14 +19,14 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 
 // Returns the length of the Charsequence
   public int length() {
-    if(index < 0 || index >= data.length) {
-      throw new IndexOutOfBoundsException();
-    }
     return this.data.length;
   }
 
 // Returns the char at a specific index
   public char charAt(int index) {
+    if(index < 0 || index >= data.length) {
+      throw new IndexOutOfBoundsException();
+    }
     return data[index];
   }
 
