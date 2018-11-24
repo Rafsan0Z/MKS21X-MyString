@@ -27,7 +27,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
     if(index < 0 || index >= data.length) {
       throw new IndexOutOfBoundsException();
     }
-    return data[index];
+    return this.data[index];
   }
 
 // Returns a part of the Charsequence, much like substring
