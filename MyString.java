@@ -1,9 +1,9 @@
-public class MyString implements Charsequence,Comparable<Charsequence>{
+public class MyString implements CharSequence,Comparable<CharSequence>{
 // Field(s)
   private char[] data;
 
 // Constructor
-  public MyString(Charsequence s) {
+  public MyString(CharSequence s) {
     data = new char[s.length()]; // Initialize the char array
     for(int i = 0; i < s.length(); i++) {
       data[i] = s.charAt(i);  // add chars to the array
@@ -11,10 +11,10 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   }
 
 // Comparable method required
-  public int compareTo(MyString object) {
+  public int compareTo(CharSequence object) {
     if(object == null || this == null) {throw new NullPointerException();} // if object or this is null, then output appropriate exception
     if(object.length() != this.length()) {return this.length() - object.length();} // if the lengths are not equal, we can find result here
-    for(int i = 0; i < object.length; i++) {
+    for(int i = 0; i < object.length(); i++) {
       if(object.charAt(i) != this.charAt(i)) {return object.charAt(i) - this.charAt(i);} // look for the disimmilar char, then return the difference
     }
     return 0; // return 0 otherwise
@@ -36,7 +36,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   }
 
 // Returns a part of the Charsequence, much like substring
-  public Charsequence subSequence(int start, int end) {
+  public CharSequence subSequence(int start, int end) {
     if( (start-end) > 0 || (end - this.length()) > 0) {
       throw new IndexOutOfBoundsException("Incorrect start and/or end input!"); // if start and end index are out of bounds, then output appropriate exception
     }
