@@ -4,4 +4,22 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 
   }
 
+  // Methods that must be written
+
+  public int length() {
+
+  }
+
+  public char charAt(int index) {
+
+  }
+
+  public Charsequence subSequence(int start, int end) {
+
+  }
+
+  public String toString{
+    
+  }
+
 }
