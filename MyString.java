@@ -4,15 +4,15 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 
 // Constructor
   public MyString(Charsequence s) {
-    data = new char[s.length()];
+    data = new char[s.length()]; // Initialize the char array
     for(int i = 0; i < s.length(); i++) {
-      data[i] = s.charAt(i);
+      data[i] = s.charAt(i);  // add chars to the array
     }
   }
 
 // Comparable method required
   public int compareTo(MyString object) {
-    if(object == null) {throw new NullPointerException();}
+    if(object == null) {throw new NullPointerException();} // if object is null, then output appropriate exception
   }
 
   // Methods that must be written
@@ -25,7 +25,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 // Returns the char at a specific index
   public char charAt(int index) {
     if(index < 0 || index >= data.length) {
-      throw new IndexOutOfBoundsException("Incorrect index input!");
+      throw new IndexOutOfBoundsException("Incorrect index input!"); // if index is out of bounds, then output appropriate exception
     }
     return this.data[index];
   }
@@ -33,7 +33,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 // Returns a part of the Charsequence, much like substring
   public Charsequence subSequence(int start, int end) {
     if( (start-end) > 0 || (end - this.length()) > 0) {
-      throw new IndexOutOfBoundsException("Incorrect start and/or end input!");
+      throw new IndexOutOfBoundsException("Incorrect start and/or end input!"); // if start and end index are out of bounds, then output appropriate exception
     }
     String result = "";
     for(int i = start; i < end; i++) {
@@ -46,7 +46,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   public String toString{
     String result = "";
     for(int i = 0; i < length(); i++ {
-      result += this.charAt(i);
+      result += this.charAt(i); // add chars to the result String in sequence
     }
     return result;
   }
