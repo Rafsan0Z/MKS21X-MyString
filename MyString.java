@@ -2,13 +2,14 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   private char[] data;
 
   public MyString(Charsequence s) {
+    data = new char[s.length()];
     for(int i = 0; i < s.length(); i++) {
       data[i] = s.charAt(i);
     }
   }
 
   public int compareTo(MyString object) {
-    
+
   }
 
   // Methods that must be written
