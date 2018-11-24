@@ -25,7 +25,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 // Returns the char at a specific index
   public char charAt(int index) {
     if(index < 0 || index >= data.length) {
-      throw new IndexOutOfBoundsException();
+      throw new IndexOutOfBoundsException("Incorrect index input!");
     }
     return this.data[index];
   }
@@ -33,7 +33,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
 // Returns a part of the Charsequence, much like substring
   public Charsequence subSequence(int start, int end) {
     if( (start-end) > 0 || (end - this.length()) > 0) {
-      throw new IndexOutOfBoundsException();
+      throw new IndexOutOfBoundsException("Incorrect start and/or end input!");
     }
     String result = "";
     for(int i = start; i < end; i++) {
