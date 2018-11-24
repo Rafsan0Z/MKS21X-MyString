@@ -16,7 +16,11 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   }
 
   public Charsequence subSequence(int start, int end) {
-
+    String result = "";
+    for(int i = start; i < end; i++) {
+      result += data[i];
+    }
+    return result;
   }
 
   public String toString{
