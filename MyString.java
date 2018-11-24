@@ -34,7 +34,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   public Charsequence subSequence(int start, int end) {
     String result = "";
     for(int i = start; i < end; i++) {
-      result += data[i];
+      result += this.data[i];
     }
     return result;
   }
@@ -43,7 +43,7 @@ public class MyString implements Charsequence,Comparable<Charsequence>{
   public String toString{
     String result = "";
     for(int i = 0; i < length(); i++ {
-      result += charAt(i);
+      result += this.charAt(i);
     }
     return result;
   }
