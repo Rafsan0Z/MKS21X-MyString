@@ -15,7 +15,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     if(object == null || this == null) {throw new NullPointerException();} // if object or this is null, then output appropriate exception
     if(object.length() != this.length()) {return this.length() - object.length();} // if the lengths are not equal, we can find result here
     for(int i = 0; i < object.length(); i++) {
-      if(object.charAt(i) != this.charAt(i)) {return object.charAt(i) - this.charAt(i);} // look for the disimmilar char, then return the difference
+      if(object.charAt(i) != this.charAt(i)) {return this.charAt(i) - object.charAt(i);} // look for the disimmilar char, then return the difference
     }
     return 0; // return 0 otherwise
   }
