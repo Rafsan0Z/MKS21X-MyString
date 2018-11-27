@@ -32,7 +32,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     if(index < 0 || index >= data.length) {
       throw new IndexOutOfBoundsException("Incorrect index input!"); // if index is out of bounds, then output appropriate exception
     }
-    return this.data[index];
+    return data[index];
   }
 
 // Returns a part of the Charsequence, much like substring
