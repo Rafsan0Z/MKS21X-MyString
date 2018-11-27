@@ -40,6 +40,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     if( (start-end) > 0 || (end - this.length()) > 0) {
       throw new IndexOutOfBoundsException("Incorrect start and/or end input!"); // if start and end index are out of bounds, then output appropriate exception
     }
+    if(start < 0 || end < 0) { throw new IndexOutOfBoundsException();}
     String result = "";
     for(int i = start; i < end; i++) {
       result += this.data[i];
